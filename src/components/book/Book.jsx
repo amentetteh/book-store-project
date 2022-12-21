@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function Book(props) {
+const Book = (props) => {
   const { title, author } = props;
   return (
     <li>
@@ -9,7 +9,7 @@ function Book(props) {
       <button type="button">Delete</button>
     </li>
   );
-}
+};
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
