@@ -1,44 +1,27 @@
 {
     "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
+      "browser": true,
+      "es6": true,
+      "jest": true
     },
-    "extends": [
-        "airbnb",
-        "eslint:recommended",
-        "plugin:react-hooks/recommended"
-    ],
-    "overrides": [],
     "parser": "@babel/eslint-parser",
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
+    "extends": ["airbnb", "plugin:react/recommended", "plugin:react-hooks/recommended"],
+    "plugins": ["react"],
     "rules": {
-        "react/jsx-filename-extension": [
-            "warn",
-            {
-                "extensions": [
-                    ".js",
-                    ".jsx"
-                ]
-            }
-        ],
-        "react/react-in-jsx-scope": "off",
-        "import/no-unresolved": "off",
-        "no-shadow": "off",
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error"
+      "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+      "react/react-in-jsx-scope": "off",
+      "import/no-unresolved": "off",
+      "no-shadow": "off"
     },
     "ignorePatterns": [
-        "dist/",
-        "build/"
+      "dist/",
+      "build/"
     ]
-}
+  }

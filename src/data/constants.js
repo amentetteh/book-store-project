@@ -12,6 +12,6 @@ export const menuLinks = [
     element: '<Categories />',
   },
 ];
-export const ADD_BOOK = 'ADD_BOOK';
-export const REMOVE_BOOK = 'REMOVE_BOOK';
-export const CHECK_STATUS = 'CHECK_STATUS';
+export const ADD_BOOK = 'book-store-project/books/ADD_BOOK';
+export const REMOVE_BOOK = 'book-store-project/books/REMOVE_BOOK';
+export const CHECK_STATUS = 'book-store-project/categories/CHECK_STATUS';
