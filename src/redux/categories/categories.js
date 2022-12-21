@@ -1,4 +1,4 @@
-import { CHECK_STATUS } from '../../data/constants';
+const CHECK_STATUS = 'book-store-project/categories/CHECK_STATUS';
 
 const initialState = [];
 
