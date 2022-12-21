@@ -1,4 +1,5 @@
-import { ADD_BOOK, REMOVE_BOOK } from '../../data/constants';
+const ADD_BOOK = 'book-store-project/books/ADD_BOOK';
+const REMOVE_BOOK = 'book-store-project/books/REMOVE_BOOK';
 
 const initialState = [];
 
