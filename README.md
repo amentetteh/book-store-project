@@ -56,7 +56,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 react-js-math-magicians-project <a name="about-project"></a>
+# 📖 book-store-project <a name="about-project"></a>
 
 > "Book Store" is a Single Page App (SPA) website for books . It allows users to:
     - Add and remove books.
