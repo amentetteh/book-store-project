@@ -1,11 +1,12 @@
+import { useSelector } from 'react-redux';
 import BookContainer from '../components/book/BookContainer';
 
-function Books() {
+const BooksPage = () => {
+  const books = useSelector((state) => state.books);
   return (
     <section>
-      <BookContainer />
+      <BookContainer books={books} />
     </section>
   );
-}
-
-export default Books;
+};
+export default BooksPage;

@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
-// import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
 import BooksList from './BooksList';
 import InputBook from './InputBook';
-import todos from '../../data/defaultsTodo.json';
 
-const BookContainer = () => {
-  const [books] = useState(todos);
-
+const BookContainer = (props) => {
+  const { books } = props;
   return (
     <div>
       <BooksList books={books} />
       <InputBook />
     </div>
   );
+};
+
+BookContainer.propTypes = {
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 export default BookContainer;

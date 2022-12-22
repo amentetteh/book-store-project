@@ -2,8 +2,8 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/navigation/Header';
-import Books from './pages/books';
-import Categories from './components/category/Categories';
+import BooksPage from './pages/books';
+import CategoriesPage from './pages/categories';
 
 const App = () => (
   <div className="App">
@@ -12,8 +12,8 @@ const App = () => (
     </header>
     <main>
       <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
+        <Route path="/" element={<BooksPage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
       </Routes>
     </main>
   </div>
