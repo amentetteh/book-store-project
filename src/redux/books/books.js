@@ -1,7 +1,9 @@
+import books from '../../data/defaultsBook.json';
+
 const ADD_BOOK = 'book-store-project/books/ADD_BOOK';
 const REMOVE_BOOK = 'book-store-project/books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = books;
 
 export const addBook = (book) => ({
   type: ADD_BOOK,
