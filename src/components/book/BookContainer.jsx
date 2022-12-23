@@ -3,6 +3,7 @@ import BooksList from './BooksList';
 import InputBook from './InputBook';
 
 const BookContainer = (props) => {
+  console.log('BookContainer');
   const { books } = props;
   return (
     <div>
