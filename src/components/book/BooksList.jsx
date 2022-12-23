@@ -13,7 +13,6 @@ const BooksList = () => {
   );
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log('HHHHHHHHHHHHHHHHHHEEEEEEEEEEEEERRRRRRRRRRRRE', books.refresh);
     dispatch(getAllBooks());
   }, [books.refresh]);
 
