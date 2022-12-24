@@ -17,10 +17,12 @@ function InputBook() {
 
   const addBookHandler = (e) => {
     e.preventDefault();
-    if (book.title && book.author) {
-      book.id = uuidv4();
+    if (book.title && book.author && book.category) {
+      book.item_id = uuidv4();
       dispatch(addBook(book));
-      setBook({ id: undefined, title: '', author: '' });
+      setBook({
+        item_id: undefined, title: '', author: '', category: '',
+      });
     }
   };
   return (
@@ -29,6 +31,7 @@ function InputBook() {
       <form>
         <input type="text" name="title" value={book.title} placeholder="Title" onChange={changeHandler} required />
         <input type="text" name="author" id="author" value={book.author} placeholder="Author" onChange={changeHandler} required />
+        <input type="text" name="category" id="category" value={book.category} placeholder="Category" onChange={changeHandler} required />
         <button type="button" onClick={addBookHandler}>ADD BOOK</button>
       </form>
     </div>

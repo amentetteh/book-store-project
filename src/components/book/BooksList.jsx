@@ -1,28 +1,31 @@
-import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Book from './Book';
+import { getAllBooks } from '../../redux/books/books';
+import BookEnty from '../../models/book';
 
-const BooksList = (props) => {
-  const { books } = props;
+const BooksList = () => {
+  const books = useSelector((state) => state.books);
+  const mappedBooks = books.books.map(
+    (book) => Object.assign(new BookEnty(), JSON.parse(book)),
+  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllBooks());
+  }, [books.refresh]);
+
   return (
     <ul>
-      {books.map((book) => (
+      {mappedBooks.map((book) => (
         <Book
           key={book.id}
           id={book.id}
           title={book.title}
           author={book.author}
+          category={book.category}
         />
       ))}
     </ul>
   );
-};
-BooksList.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
 };
 export default BooksList;
