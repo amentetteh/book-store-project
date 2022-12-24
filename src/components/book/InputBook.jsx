@@ -17,10 +17,12 @@ function InputBook() {
 
   const addBookHandler = (e) => {
     e.preventDefault();
-    if (book.title && book.author) {
+    if (book.title && book.author && book.category) {
       book.item_id = uuidv4();
       dispatch(addBook(book));
-      setBook({ id: undefined, title: '', author: '' });
+      setBook({
+        item_id: undefined, title: '', author: '', category: '',
+      });
     }
   };
   return (

@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import books from '../../data/defaultsBook.json';
 import { doGet, doPost, doRequestWithoutBody } from '../../consume-api/api';
 import { BOOK_URL } from '../../data/constants';
 import BookEntity from '../../models/book';
@@ -13,7 +12,7 @@ const initialState = {
   loading: false,
   refresh: false,
 };
-export const removeBook = createAsyncThunk(REMOVE_BOOK, (book) => doRequestWithoutBody(`${BOOK_URL / book.id}`, 'DELETE', false));
+export const removeBook = createAsyncThunk(REMOVE_BOOK, (book) => doRequestWithoutBody(`${BOOK_URL}/${book.id}`, 'DELETE', false));
 export const getAllBooks = createAsyncThunk(DISPLAY_BOOKS, () => doGet(BOOK_URL, true));
 export const addBook = createAsyncThunk(ADD_BOOK, (book) => doPost(BOOK_URL, book, false));
 

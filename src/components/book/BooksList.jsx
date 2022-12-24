@@ -6,8 +6,6 @@ import BookEnty from '../../models/book';
 
 const BooksList = () => {
   const books = useSelector((state) => state.books);
-  console.log(books);
-
   const mappedBooks = books.books.map(
     (book) => Object.assign(new BookEnty(), JSON.parse(book)),
   );
