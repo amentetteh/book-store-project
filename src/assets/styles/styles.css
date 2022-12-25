@@ -7,7 +7,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-right: 4%;
   padding: 24px 4%;
   border-bottom: 1px solid #e8e8e8;
 }
@@ -230,7 +229,7 @@ nav {
   text-align: left;
   font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: -.18px;
+  letter-spacing: -0.18px;
   color: #888;
 }
 
