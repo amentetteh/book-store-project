@@ -1,6 +1,5 @@
 /* eslint no-eval: 0 */
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
 import Header from './components/navigation/Header';
 import BooksPage from './pages/books';
 import CategoriesPage from './pages/categories';
