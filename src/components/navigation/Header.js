@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import menuLinks from '../../commons/menu';
 import '../../assets/styles/styles.css';
@@ -17,7 +17,7 @@ function Header() {
           ))}
         </ul>
       </div>
-      <FontAwesomeIcon className="nav-right connected-user" icon={solid('user')} />
+      <FontAwesomeIcon className="nav-right connected-user" icon={faUser} />
     </nav>
   );
 }
