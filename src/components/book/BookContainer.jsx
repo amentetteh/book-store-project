@@ -7,6 +7,7 @@ const BookContainer = (props) => {
   return (
     <div>
       <BooksList books={books} />
+      <div className="horizontal-divider" />
       <InputBook />
     </div>
   );
