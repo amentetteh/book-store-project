@@ -27,12 +27,18 @@ function InputBook() {
   };
   return (
     <div>
-      <h2>ADD NEW BOOK</h2>
+      <h2 className="form-title">ADD NEW BOOK</h2>
       <form>
-        <input type="text" name="title" value={book.title} placeholder="Title" onChange={changeHandler} required />
-        <input type="text" name="author" id="author" value={book.author} placeholder="Author" onChange={changeHandler} required />
-        <input type="text" name="category" id="category" value={book.category} placeholder="Category" onChange={changeHandler} required />
-        <button type="button" onClick={addBookHandler}>ADD BOOK</button>
+        <input className="input title-field" type="text" name="title" value={book.title} placeholder="Title" onChange={changeHandler} required />
+        <input className="input author-field" type="text" name="author" id="author" value={book.author} placeholder="Author" onChange={changeHandler} required />
+        <select className="input category-field" type="text" name="category" id="category" value={book.category} placeholder="Category" onChange={changeHandler}>
+          <option value="" disabled>Categories</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Economy">Economy</option>
+          <option value="Biography">Biography</option>
+          <option value="History">History</option>
+        </select>
+        <button className="primary-button-big" type="button" onClick={addBookHandler}>ADD BOOK</button>
       </form>
     </div>
   );

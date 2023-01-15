@@ -27,6 +27,7 @@ const booksSlice = createSlice({
       keys.forEach((key) => {
         action.payload[key].forEach((value) => {
           const temp = new BookEntity(
+            value.id,
             value.title,
             value.author,
             value.category,

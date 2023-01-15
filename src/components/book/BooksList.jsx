@@ -15,7 +15,7 @@ const BooksList = () => {
   }, [books.refresh]);
 
   return (
-    <ul>
+    <ul className="book-list">
       {mappedBooks.map((book) => (
         <Book
           key={book.id}
